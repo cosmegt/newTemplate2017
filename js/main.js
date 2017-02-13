@@ -6,11 +6,6 @@ closeTime = openTime + delayTime;
 
 
 
-
-
-
-
-
 //Jquery
 $(document).ready(function(){});
 
@@ -19,6 +14,7 @@ var nOpen= function(elementIDo, iElementIDo){
     $(elementIDo).addClass('zoomOut animated');
     $(elementIDo).delay(delayTime).fadeOut(openTime);
     $(iElementIDo).delay(closeTime).fadeIn(openTime);
+    $('closer').show();
 }
 var nClose= function(elementIDc, iElementIDc){
     $(elementIDc).removeClass('zoomOut animated');
@@ -66,12 +62,24 @@ $('#mImage').click(function(){
 $('#cProjects').click(function(){
     nClose('#pImage', '#cProjects');
     cMenu('pMenu');
+    $('closer').hide();
 })
 $('#cTinker').click(function(){
     nClose('#tImage', '#cTinker');
     cMenu('tMenu');
+    $('closer').hide();
 })
 $('#cMore').click(function(){
     nClose('#mImage', '#cMore');
     cMenu('mMenu');
+    $('closer').hide();
+})
+$('closer').click(function(){
+    nClose('#mImage', '#cMore');
+    nClose('#tImage', '#cTinker');
+    nClose('#pImage', '#cProjects');
+    cMenu('mMenu');
+    cMenu('tMenu');
+    cMenu('pMenu');
+    $('closer').hide();
 })
