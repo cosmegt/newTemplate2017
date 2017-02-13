@@ -111,4 +111,17 @@ closer:hover{
     color: #9A0000;
     margin-left: 10px;
 }
-
+displayer{
+    position: fixed;
+    top: 0;
+    left: -500px;
+    background-color: #262626;
+    width: 500px;
+    height: 100%;
+    border-left: white 2px solid;
+}
+#dTitle{
+    text-align: center;
+    font-size: 200%;
+    color: white;
+}

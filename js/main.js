@@ -1,35 +1,61 @@
-//Vars And OOP Functions
+//Vars
 openTime = 80;
 delayTime = openTime/2
 closeTime = openTime + delayTime;
+var display = 'something';
 
+//OOP functions
+var Page = function(title, image, description){
+    this.title = title;
+    this.image = image;
+    this.description = description;
+}
 
-
-
-//Jquery
+//OOP Objects
+var photoAlbum = new Page("Photo Album", "source somewhere", "An CSS/HTML/JS simple album using external libraries.");
+var teamRetail = new Page("Team Retail", "source somewhere", "A website store page made with OOP programming in teams.")
+//Jquery START UP
 $(document).ready(function(){});
 
-/* Navigation Funtions */
+//Funtions
+//Open Main Menu
 var nOpen= function(elementIDo, iElementIDo){
     $(elementIDo).addClass('zoomOut animated');
     $(elementIDo).delay(delayTime).fadeOut(openTime);
     $(iElementIDo).delay(closeTime).fadeIn(openTime);
     $('closer').show();
 }
+//Close Main Menu
 var nClose= function(elementIDc, iElementIDc){
     $(elementIDc).removeClass('zoomOut animated');
     $(elementIDc).delay(closeTime).fadeIn(openTime);
     $(iElementIDc).delay(delayTime).fadeOut(openTime);
+    closeDisplay();
+    
 }
-var oMenu= function(menuID){
+//Open Second Menu
+var oMenu = function(menuID){
     $(menuID).animate({
         left: '120px'
     });
 }
-var cMenu= function(menuIDc){
+//Close Second Menu
+var cMenu = function(menuIDc){
     $(menuIDc).animate({
         left: '-400px'
     });
+}
+//Open Third Menu
+var setDisplay = function(){
+    $('#dTitle').html(display.title);
+    $("displayer").animate({
+        left: '520px'
+    },400);
+}
+var closeDisplay = function(){
+    $('displayer').animate({
+        left: '-500px'
+    },400);
 }
 //Actions
 $('#pImage').click(function(){
@@ -84,4 +110,12 @@ $('closer').click(function(){
     $('closer').hide();
 })
 
-console.log('ello world')
+$('#li1').click(function(){
+    display = photoAlbum;
+    setDisplay();
+})
+$('#li2').click(function(){
+    display = teamRetail;
+    setDisplay();
+
+})
