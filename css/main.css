@@ -1,0 +1,45 @@
+/*Main CSS 2017*/
+/*Body And Native Non-Tag-Elements*/
+*{
+    font-family: 'Roboto', sans-serif;
+    color: #5d5d5d;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/*Navigation Style*/
+navigation{
+    height: 100%;
+    width: 120px;
+    position: fixed;
+    top: -1;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+}
+navigation li{
+    display: inline-block;
+    height: 24%;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+}
+navigation li:hover{
+    cursor: pointer;
+}
+.nImg{
+    width: 100%;
+    animation-duration: 0s;
+    animation-delay: 0s;
+}
+.nImage > i{
+    display: none;
+    font-size: 750%;
+    animation-duration: 0s;
+    animation-delay: 0s;
+    color: #9A0000;
+}
