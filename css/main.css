@@ -50,7 +50,7 @@ navigation li:hover{
 }
 /*Animate CSS Timing Changes*/
 .fadeInLeft{
-    animation-duration: .4s
+    animation-duration: .4ws
 }
 /*Menu Styling*/
 .menu{
@@ -116,6 +116,10 @@ closer:hover{
     color: #9A0000;
     margin-left: 10px;
 }
+#subTitle2{
+    color: #9A0000;
+    margin-left: 10px;
+}
 displayer{
     position: fixed;
     top: 0;
@@ -143,9 +147,37 @@ mainTitle{
     z-index: 9;
 }
 .greatTitle{
-    font-family: 'Yellowtail', cursive;
+    font-family: 'Pathway Gothic One', sans-serif;
     font-size: 300%;
-    color: white;
-    background-color:#9A0000;
+    color: #941111;
     padding-right: 20px;
+    background-color: white;
+}
+content{
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: 100px;
+    height: 70%;
+    width: calc(100% - 150px);
+}
+#child{
+    width: 350px;
+    height: 100%;
+    display: inline-block;
+    border: 3px solid black;
+    /* position: absolute; */
+    border-radius: 5px;
+    animation-duration: 1.6s;
+    font-size: 120%;
+}
+#child img{
+    width: 100%;
+}
+#bigChild{
+    animation-delay: .2s;
+    animation-duration: 1.6s;
+    height: 100%;
+    width: 75%;
+    float: right;
 }
