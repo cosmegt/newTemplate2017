@@ -103,6 +103,7 @@ closer{
     left: 0;
     background-color: rgba(0, 0, 0, 0.50);
     display: none;
+    z-index: 12;
 }
 closer:hover{
     cursor: pointer;
@@ -119,6 +120,7 @@ displayer{
     width: 500px;
     height: 100%;
     border-left: white 2px solid;
+    z-index: 99;
 }
 #dTitle{
     text-align: center;
@@ -130,4 +132,16 @@ displayer{
 }
 #dDesc{
     color: #c6c6c6;
+}
+mainTitle{
+    position: absolute;
+    left: 120px;
+    z-index: 9;
+}
+.greatTitle{
+    font-family: 'Yellowtail', cursive;
+    font-size: 300%;
+    color: white;
+    background-color:#9A0000;
+    padding-right: 20px;
 }
