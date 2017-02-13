@@ -24,6 +24,7 @@ navigation{
     left: 0;
     background-color: white;
     z-index: 9999;
+    display: inline-block;
 }
 navigation li{
     display: inline-block;
