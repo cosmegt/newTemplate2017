@@ -107,3 +107,7 @@ closer{
 closer:hover{
     cursor: pointer;
 }
+#subTitle{
+    color: #9A0000;
+    margin-left: 10px;
+}
