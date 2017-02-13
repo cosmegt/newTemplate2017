@@ -83,3 +83,5 @@ $('closer').click(function(){
     cMenu('pMenu');
     $('closer').hide();
 })
+
+console.log('ello world')
