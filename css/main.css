@@ -125,3 +125,9 @@ displayer{
     font-size: 200%;
     color: white;
 }
+#dImage{
+    width: 100%;
+}
+#dDesc{
+    color: #c6c6c6;
+}

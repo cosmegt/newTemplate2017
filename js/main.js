@@ -5,15 +5,16 @@ closeTime = openTime + delayTime;
 var display = 'something';
 
 //OOP functions
-var Page = function(title, image, description){
+var Page = function(title, image, description, href){
     this.title = title;
     this.image = image;
     this.description = description;
+    this.href = href;
 }
 
 //OOP Objects
-var photoAlbum = new Page("Photo Album", "source somewhere", "An CSS/HTML/JS simple album using external libraries.");
-var teamRetail = new Page("Team Retail", "source somewhere", "A website store page made with OOP programming in teams.")
+var photoAlbum = new Page("Photo Album", "./img/thumbnails/photoAlbum.png", "An CSS/HTML/JS simple album using external libraries.", "https://goo.gl/RMLlq7");
+var teamRetail = new Page("Team Retail", "./img/thumbnails/teamRetail.png", "A website store page made with OOP programming in teams.", "https://goo.gl/CvJcTV")
 //Jquery START UP
 $(document).ready(function(){});
 
@@ -48,6 +49,9 @@ var cMenu = function(menuIDc){
 //Open Third Menu
 var setDisplay = function(){
     $('#dTitle').html(display.title);
+    $('#dImage').attr('src',display.image);
+    $('#dDesc').html(display.description);
+    $('#dLink').attr('href',display.href);
     $("displayer").animate({
         left: '520px'
     },400);
