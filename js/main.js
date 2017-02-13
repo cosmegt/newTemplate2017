@@ -32,7 +32,7 @@ var oMenu= function(menuID){
 }
 var cMenu= function(menuIDc){
     $(menuIDc).animate({
-        left: '-500px'
+        left: '-400px'
     });
 }
 //Actions

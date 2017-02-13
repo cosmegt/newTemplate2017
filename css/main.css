@@ -4,6 +4,9 @@
     font-family: 'Roboto', sans-serif;
     color: #5d5d5d;
 }
+::selection {
+  background: #9A0000; 
+}
 li{
     list-style: none;
 }
@@ -46,11 +49,11 @@ navigation li:hover{
 }
 /*Menu Styling*/
 .menu{
-    width: 500px;
+    width: 400px;
     height: 100%;
     position: fixed;
     top: 0;
-    left: -500px;
+    left: -400px;
     background-color: #262626;
     z-index: 999;
 }
@@ -67,4 +70,27 @@ navigation li:hover{
 }
 #menuImage{
     height: 100%;
+}
+.liHolder{
+    width: 90%;
+    height: auto;
+    margin: 20px;
+}
+.liHolder:hover{
+    cursor: pointer;
+}
+.mList{
+    font-size: 140%;
+    color: white;
+    width: 70%;
+    display: inline-block;
+}
+#next{
+    float: right;
+    color: white;
+    font-size: 200%;
+    transition: .3s all; 
+}
+.liHolder:hover > #next{
+    transform: translateX(-5px);
 }
