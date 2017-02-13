@@ -48,6 +48,10 @@ navigation li:hover{
     animation-delay: 0s;
     color: #9A0000;
 }
+/*Animate CSS Timing Changes*/
+.fadeInLeft{
+    animation-duration: .4s
+}
 /*Menu Styling*/
 .menu{
     width: 400px;
@@ -80,7 +84,7 @@ navigation li:hover{
 .liHolder:hover{
     cursor: pointer;
 }
-.mList{
+#mList{
     font-size: 140%;
     color: white;
     width: 70%;

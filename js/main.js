@@ -4,7 +4,7 @@ delayTime = openTime/2
 closeTime = openTime + delayTime;
 var display = 'something';
 
-//OOP functions
+/*OOP Functions*/
 var Page = function(title, image, description, href){
     this.title = title;
     this.image = image;
@@ -18,13 +18,15 @@ var teamRetail = new Page("Team Retail", "./img/thumbnails/teamRetail.png", "A w
 //Jquery START UP
 $(document).ready(function(){});
 
-//Funtions
+/*Functions*/
 //Open Main Menu
 var nOpen= function(elementIDo, iElementIDo){
     $(elementIDo).addClass('zoomOut animated');
     $(elementIDo).delay(delayTime).fadeOut(openTime);
     $(iElementIDo).delay(closeTime).fadeIn(openTime);
     $('closer').show();
+    $('#subTitle', '*').addClass('fadeInLeft animated');
+    $('#mList', '*').addClass('fadeInLeft animated');
 }
 //Close Main Menu
 var nClose= function(elementIDc, iElementIDc){
@@ -54,14 +56,22 @@ var setDisplay = function(){
     $('#dLink').attr('href',display.href);
     $("displayer").animate({
         left: '520px'
-    },400);
+    },350);
+    $('#dTite', '*').addClass('fadeInLeft animated');
+    $('#dDesc', '*').addClass('fadeInLeft animated');
 }
 var closeDisplay = function(){
     $('displayer').animate({
         left: '-500px'
     },400);
 }
-//Actions
+var remover = function(){
+    $('#subTitle', '*').removeClass('fadeInLeft animated');
+    $('#mList', '*').removeClass('fadeInLeft animated');
+    $('#dTite', '*').removeClass('fadeInLeft animated');
+    $('#dDesc', '*').removeClass('fadeInLeft animated');
+}
+/*Actions*/
 $('#pImage').click(function(){
     nOpen('#pImage', '#cProjects');
     nClose('#tImage', '#cTinker');
@@ -93,16 +103,19 @@ $('#cProjects').click(function(){
     nClose('#pImage', '#cProjects');
     cMenu('pMenu');
     $('closer').hide();
+    remover()
 })
 $('#cTinker').click(function(){
     nClose('#tImage', '#cTinker');
     cMenu('tMenu');
     $('closer').hide();
+    remover()
 })
 $('#cMore').click(function(){
     nClose('#mImage', '#cMore');
     cMenu('mMenu');
     $('closer').hide();
+    remover()
 })
 $('closer').click(function(){
     nClose('#mImage', '#cMore');
@@ -112,6 +125,7 @@ $('closer').click(function(){
     cMenu('tMenu');
     cMenu('pMenu');
     $('closer').hide();
+    remover()
 })
 
 $('#li1').click(function(){
