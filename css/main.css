@@ -112,13 +112,3 @@ closer:hover{
     margin-left: 10px;
 }
 
-
-/*Clock*/
-clock{
-    background-color: transparent;
-    border: 2px solid black;
-    border-radius: 5px;
-    right: 30px;
-    font-size: 300%;
-    position: absolute;
-}

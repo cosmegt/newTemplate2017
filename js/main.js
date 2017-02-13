@@ -83,13 +83,3 @@ $('closer').click(function(){
     cMenu('pMenu');
     $('closer').hide();
 })
-
-
-//Clock script
-$('#clock').fitText(1.3);
-
-function update() {
-  $('#clock').html(moment().format('D. MMMM YYYY H:mm:ss'));
-}
-
-setInterval(update, 1000);
